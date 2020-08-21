@@ -1,13 +1,22 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view>
+  <view class="wrap">
+    <image src="{{url}}" class="share-image" style="width:{{painting.width}}rpx;height:{{painting.height}}rpx;"></image>
+    <c-canvas-drawer painting="{{painting}}" bind:getImage="eventGetImage" class="canvasdrawer">
+  </c-canvas-drawer>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='flex share-btn'>
+    <view class='share-btn-item'>
+      <button open-type='share'>share</button>
+      <view>微信好友</view>
+    </view>
+    <view class='share-btn-item'  bindtap='saveImg'>
+      <view>保存图片</view>
+    </view>
+  </view>
+  <view wx:if='{{isShowDialog}}' class="mask">
+    <view class="content">
+      你关闭了访问相册的权限，无法保存，请允许访问相册
+      <button open-type='openSetting'>打开设置</button>
+    </view>
   </view>
 </view>

@@ -1,21 +1,47 @@
-/**index.wxss**/
-.userinfo {
+.wrap{
+  text-align: center;
+  margin: 30rpx 0 0 0;
+}
+.flex{
   display: flex;
-  flex-direction: column;
+}
+.share-btn {
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 200rpx;
+  font-size: 26rpx;
+  position: fixed;
+  background: #fff;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.share-btn .share-btn-item{
+  flex: 1;
+  text-align:center;
+  height: 200rpx;
+  position: relative;
+  color: #9D9FA7;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.share-btn button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
-
-.usermotto {
-  margin-top: 200px;
+.mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.3);
+}
+.mask .content{
+  width: 500rpx;
+  padding: 30rpx;
+  margin: 300rpx auto 0;
+  background: #fff;
+  border-radius: 18rpx;
 }

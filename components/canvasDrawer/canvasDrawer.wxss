@@ -1,0 +1,4 @@
+.canvasDrawer--board,.board {
+  position: fixed;
+  top: 20000rpx;
+}

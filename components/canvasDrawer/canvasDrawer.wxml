@@ -1,0 +1,1 @@
+<canvas canvas-id="{{canvasId}}" style="width:{{width}}px;height:{{height}}px;" class="board"></canvas>
