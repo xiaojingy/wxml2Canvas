@@ -32,7 +32,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.1",
-	"appid": "wx5f523133caa861a8",
+	"appid": "",
 	"projectname": "wxml2Canvas",
 	"debugOptions": {
 		"hidedInDevtools": []
